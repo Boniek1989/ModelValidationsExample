@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ModelValidationsExample.CustomModelBinder;
 using ModelValidationsExample.Models;
 
 namespace ModelValidationsExample.Controllers
@@ -7,7 +8,7 @@ namespace ModelValidationsExample.Controllers
     {
         [Route("register")]
         //[Bind(nameof(Person.PersonName), nameof(Person.email), nameof(Person.Password), nameof(Person.ConfirmPassword))] Only binded properties are received
-        public IActionResult Index([FromBody]Person person)
+        public IActionResult Index([FromBody] [ModelBinder(BinderType = typeof(PersonModelBinder))] Person person)
         {
             if (ModelState.IsValid==false)
             {
