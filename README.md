@@ -9,3 +9,6 @@ ASP.NET Core Validation example using POSTMAN.
 
 3. Added XML serializer
 ![Zrzut ekranu 2024-04-27 122956](https://github.com/Boniek1989/ModelValidationsExample/assets/152004933/d481a9da-52e3-4abb-a432-fa40b1ccfdfa)
+
+4. CustomModelBinder
+![CustomModelBinder](https://github.com/Boniek1989/ModelValidationsExample/assets/152004933/87bdc4fa-f540-4e52-af55-a780c0dd9982)
