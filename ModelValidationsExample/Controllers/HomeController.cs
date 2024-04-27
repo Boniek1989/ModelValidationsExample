@@ -6,7 +6,8 @@ namespace ModelValidationsExample.Controllers
     public class HomeController : Controller
     {
         [Route("register")]
-        public IActionResult Index(Person person)
+        //[Bind(nameof(Person.PersonName), nameof(Person.email), nameof(Person.Password), nameof(Person.ConfirmPassword))] Only binded properties are received
+        public IActionResult Index([FromBody]Person person)
         {
             if (ModelState.IsValid==false)
             {
